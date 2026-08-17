@@ -37,7 +37,7 @@ jobs:
 
       - name: Initialize Terraform
         run: |
-          cd terraform_vertex
+          cd Terraform_Vertex
           terraform init
 
       - name: Apply Terraform
