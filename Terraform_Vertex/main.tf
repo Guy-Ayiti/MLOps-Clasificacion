@@ -8,9 +8,9 @@ provider "google" {
 
 
 resource "google_bigquery_table_iam_binding" "tableTrain_access_viewer" {
-  table_id   = iris-train        #google_bigquery_table.tableTrain.table_id
-  dataset_id = BaseDatosIris      #google_bigquery_table.tableTrain.dataset_id
-  project    = proyecto-fuente  #google_bigquery_table.tableTrain.project
+  table_id   = "iris-train"        #google_bigquery_table.tableTrain.table_id
+  dataset_id = "BaseDatosIris"      #google_bigquery_table.tableTrain.dataset_id
+  project    = "proyecto-fuente"  #google_bigquery_table.tableTrain.project
 
   role    = "roles/bigquery.dataViewer"
   members = [
@@ -20,9 +20,9 @@ resource "google_bigquery_table_iam_binding" "tableTrain_access_viewer" {
 
 
 resource "google_bigquery_table_iam_binding" "tableTest_access_viewer" {
-  table_id   = iris-test   #google_bigquery_table.tableTest.table_id
-  dataset_id = BaseDatosIris  #google_bigquery_table.tableTest.dataset_id
-  project    = proyecto-fuente   #google_bigquery_table.tableTest.project
+  table_id   = "iris-test"   #google_bigquery_table.tableTest.table_id
+  dataset_id = "BaseDatosIris"  #google_bigquery_table.tableTest.dataset_id
+  project    = "proyecto-fuente"   #google_bigquery_table.tableTest.project
 
   role    = "roles/bigquery.dataViewer"
   members = [
