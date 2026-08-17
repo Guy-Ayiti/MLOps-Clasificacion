@@ -5,3 +5,7 @@ table_id_2   = "iris-test"
 dataset_id_2 = "Resultados"
 table_id_3   = "predictions"
 region       = "US"
+
+service_account_email = "vertex-processing@proyecto-mlops-504619.iam.gserviceaccount.com"
+project_id_fuente      = "proyecto-fuente"
+project_id_produccion  = "proyecto-produccion-505720"

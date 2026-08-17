@@ -32,3 +32,18 @@ variable "region" {
   description = ""
   type = string
 }
+
+variable "service_account_email" {
+  description = "Service account that needs cross-project BigQuery access"
+  type        = string
+}
+
+variable "project_id_fuente" {
+  description = "Project ID hosting the source Iris tables (proyecto-fuente)"
+  type        = string
+}
+
+variable "project_id_produccion" {
+  description = "Project ID hosting the Resultados dataset (proyecto-produccion)"
+  type        = string
+}
