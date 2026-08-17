@@ -1,0 +1,11 @@
+CREATE TABLE proyecto-mlops-504619.HistoryTable.predictions (
+    SepalLength FLOAT64,
+    SepalWidth FLOAT64,
+    PetalLength FLOAT64,
+    PetalWidth FLOAT64,
+    Species STRING,
+    Predicted STRING,
+    CreationUser STRING,
+    ProcessDate DATE,
+    LoadDate DATETIME
+)
