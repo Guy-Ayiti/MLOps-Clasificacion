@@ -81,7 +81,7 @@ resource "google_bigquery_table" "tableTest" {
 }
 
 
-resource "google_bigquery_dataset_iam_binding" "tableTrain_access_viewer" {
+resource "google_bigquery_table_iam_binding" "tableTrain_access_viewer" {
   table_id = google_bigquery_table.tableTrain.table_id
   project    = google_bigquery_table.tableTrain.project
 
@@ -92,7 +92,7 @@ resource "google_bigquery_dataset_iam_binding" "tableTrain_access_viewer" {
 }
 
 
-resource "google_bigquery_dataset_iam_binding" "tableTest_access_viewer" {
+resource "google_bigquery_table_iam_binding" "tableTest_access_viewer" {
   table_id = google_bigquery_table.tableTest.table_id
   project    = google_bigquery_table.tableTest.project
 
