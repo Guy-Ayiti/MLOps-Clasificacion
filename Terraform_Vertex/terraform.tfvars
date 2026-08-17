@@ -1,0 +1,7 @@
+project_id   = "proyecto-mlops-504619"
+dataset_id_1 = "BaseDatosIris"
+table_id_1   = "iris-train"
+table_id_2   = "iris-test"
+dataset_id_2 = "Resultados"
+table_id_3   = "predictions"
+region       = "US"

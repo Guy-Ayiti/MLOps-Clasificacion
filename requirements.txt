@@ -1,3 +1,13 @@
+
+fastapi
+uvicorn
+pandas
+joblib
+python-multipart
+scikit-learn
+xgboost
+
+
 PyYAML
 pytz
 fire
@@ -5,11 +15,12 @@ yq
 nbconvert==6.4.5
 jupyter-client==7.2.0
 ipython
-pandas
-scikit-learn
+packaging
+
 
 google-cloud-aiplatform==1.18.0
 kfp==1.8.21
 google-cloud-pipeline-components==1.0.24
 google-cloud-storage
 google-auth
+papermill
