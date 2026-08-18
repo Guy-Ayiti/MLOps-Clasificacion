@@ -3,27 +3,27 @@ variable "project_id" {
   type = string
 }
 
-variable "dataset_id_1" {
+variable "dataset_fuente" {
   description = ""
   type = string
 }
 
-variable "table_id_1" {
+variable "table_train" {
   description = ""
   type = string
 }
 
-variable "table_id_2" {
+variable "table_test" {
   description = ""
   type = string
 }
 
-variable "dataset_id_2" {
+variable "dataset_final" {
   description = ""
   type = string
 }
 
-variable "table_id_3" {
+variable "table_prediction" {
   description = ""
   type = string
 }
@@ -33,7 +33,7 @@ variable "region" {
   type = string
 }
 
-variable "service_account_email" {
+variable "service_account" {
   description = "Service account that needs cross-project BigQuery access"
   type        = string
 }

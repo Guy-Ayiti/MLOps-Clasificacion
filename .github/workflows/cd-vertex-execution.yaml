@@ -45,4 +45,4 @@ jobs:
       - name: Execute Jupyter Notebook
         run: |
           source venv/bin/activate
-          papermill my_app/pipeline_bigquery_component.ipynb my_app/output.ipynb -k venv
+          papermill Notebooks/Classification-Pipeline.ipynb my_app/output.ipynb -k venv

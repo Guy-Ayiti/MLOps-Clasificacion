@@ -4,13 +4,10 @@ provider "google" {
 }
 
 
-
-
-
-resource "google_bigquery_table_iam_binding" "tableTrain_access_viewer" {
-  table_id   = "iris-train"        #google_bigquery_table.tableTrain.table_id
-  dataset_id = "BaseDatosIris"      #google_bigquery_table.tableTrain.dataset_id
-  project    = "proyecto-fuente"  #google_bigquery_table.tableTrain.project
+resource "google_bigquery_table_iam_binding" "table_train_access_viewer" {
+  project    = "proyecto-fuente"
+  dataset_id = "BaseDatosIris"
+  table_id   = "iris-train"  
 
   role    = "roles/bigquery.dataViewer"
   members = [
@@ -19,10 +16,10 @@ resource "google_bigquery_table_iam_binding" "tableTrain_access_viewer" {
 }
 
 
-resource "google_bigquery_table_iam_binding" "tableTest_access_viewer" {
-  table_id   = "iris-test"   #google_bigquery_table.tableTest.table_id
-  dataset_id = "BaseDatosIris"  #google_bigquery_table.tableTest.dataset_id
-  project    = "proyecto-fuente"   #google_bigquery_table.tableTest.project
+resource "google_bigquery_table_iam_binding" "table_test_access_viewer" {
+  project    = "proyecto-fuente"
+  dataset_id = "BaseDatosIris"
+  table_id   = "iris-test"    
 
   role    = "roles/bigquery.dataViewer"
   members = [
@@ -38,21 +35,21 @@ resource "google_bigquery_table_iam_binding" "tableTest_access_viewer" {
 # ---------------------------------------------------------------------------
 
 resource "google_bigquery_table_iam_member" "iris_train_viewer" {
-  project    = var.project_id_fuente
-  dataset_id = var.dataset_id_1
-  table_id   = var.table_id_1
+  project    = "proyecto-fuente"
+  dataset_id = "BaseDatosIris"
+  table_id   = "iris-train"
 
   role   = "roles/bigquery.dataViewer"
-  member = "serviceAccount:${var.service_account_email}"
+  member = "serviceAccount:${var.service_account}"
 }
 
 resource "google_bigquery_table_iam_member" "iris_test_viewer" {
-  project    = var.project_id_fuente
-  dataset_id = var.dataset_id_1
-  table_id   = var.table_id_2
+  project    = "proyecto-fuente"
+  dataset_id = "BaseDatosIris"
+  table_id   = "iris-test"
 
   role   = "roles/bigquery.dataViewer"
-  member = "serviceAccount:${var.service_account_email}"
+  member = "serviceAccount:${var.service_account}"
 }
 
 
@@ -63,19 +60,19 @@ resource "google_bigquery_table_iam_member" "iris_test_viewer" {
 # ---------------------------------------------------------------------------
 
 resource "google_bigquery_dataset_iam_member" "resultados_viewer" {
-  project    = var.project_id_produccion
-  dataset_id = var.dataset_id_2
+  project    = "proyecto-produccion-505720"
+  dataset_id = "Resultados"
 
   role   = "roles/bigquery.dataViewer"
-  member = "serviceAccount:${var.service_account_email}"
+  member = "serviceAccount:${var.service_account}"
 }
 
 resource "google_bigquery_dataset_iam_member" "resultados_editor" {
-  project    = var.project_id_produccion
-  dataset_id = var.dataset_id_2
+  project    = "proyecto-produccion-505720"
+  dataset_id = "Resultados"
 
   role   = "roles/bigquery.dataEditor"
-  member = "serviceAccount:${var.service_account_email}"
+  member = "serviceAccount:${var.service_account}"
 }
 
 
